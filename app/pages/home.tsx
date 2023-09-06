@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
-import randomColor from "../utils/randomColor";
+import { getColorBySecond } from "../utils/colorSelection";
 import Button from "../components/Button";
 import Counter from "../components/Counter";
 
@@ -10,9 +10,9 @@ const HomePage = () => {
   const [timeLeft, setTimeLeft] = useState(60);
 
   useEffect(() => {
-    if (timeLeft > 0 && !clicked) {
+    if (!clicked) {
       const timer = setInterval(() => {
-        setTimeLeft((prevTime) => prevTime - 1);
+        setTimeLeft((prevTime) => prevTime === 0 ? 60 : prevTime - 1);
       }, 1000);
 
       return () => clearInterval(timer);
@@ -22,24 +22,25 @@ const HomePage = () => {
   const handleClick = () => {
     if (!clicked) {
       setClicked(true);
-      const random = randomColor();
-      setColor(random);
+      const colorSelected = getColorBySecond(timeLeft);
+      setColor(colorSelected);
     }
   };
 
   return (
-    <div>
-      <h1>Reddit Button</h1>
-      <Button onClick={handleClick} disabled={clicked || timeLeft === 0}>
-        {clicked ? "Botón clickeado" : "Clickea el botón"}
-      </Button>
+    <section className="flex flex-col gap-y-10">
       <Counter timeLeft={timeLeft} />
+      <Button onClick={handleClick} disabled={clicked || timeLeft === 0}>
+        <span className="absolute">
+          {clicked ? "Pressed" : "Press"}
+        </span>
+      </Button>
       {color && (
-        <div
+        <article
           style={{ backgroundColor: color, width: "100px", height: "100px" }}
-        ></div>
+        ></article>
       )}
-    </div>
+    </section>
   );
 };
 
