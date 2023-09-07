@@ -55,6 +55,9 @@ const HomePage = () => {
         .then((user) => {
           setTimeLeft(60);
           setUserClicking(user.data);
+          setTimeout(() => {
+            setUserClicking(null);
+          }, 3000);
         })
     }
   };
@@ -79,9 +82,11 @@ const HomePage = () => {
               {!!assignedColor ? "Pressed" : "Press"}
             </span>
           </Button>
-          {userClicking && <Notification
-            text={`${userClicking?.username} clickeo el boton!`}
-          />}
+          <article className={`h-24 ${!!delayedTime && !!assignedColor ? 'hidden' : ''}`}>
+            {userClicking && <Notification
+              text={`${userClicking?.username} clickeo el boton!`}
+            />}
+          </article>
           {!!assignedColor && (
             <article
               className="text-5xl font-bold flex items-center justify-center"
