@@ -6,6 +6,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage'
 
 import Button from "../components/Button";
 import Counter from "../components/Counter";
+import UsersTable from "../components/UsersTable";
 import Notification from "../components/Notification";
 
 interface userClickingInterface {
@@ -89,6 +90,7 @@ const HomePage = () => {
             )}
         </div>
       )}
+      {(!!delayedTime && !!assignedColor) && <UsersTable />}
     </section>
   );
 };
