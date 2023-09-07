@@ -19,8 +19,8 @@ const UsersTable: React.FC<any> = () => {
 				</tr>
 			</thead>
 			<tbody>
-				{rankingDeColores.map((rank) => (
-					<tr>
+				{rankingDeColores.map((rank, index) => (
+					<tr key={index}>
 						<td className="text-center">{rank.posicion}</td>
 						<td className="text-center" style={{backgroundColor: rank.color, textShadow: '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black'}}>{rank.color}</td>
 						<td className="text-center">{rank.cantidad}</td>

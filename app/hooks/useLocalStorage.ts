@@ -1,23 +1,23 @@
+"use client"
 import { useCallback, useEffect, useState } from "react";
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
-  const initialize = (key: string) => {
-    try {
-      const item = localStorage.getItem(key);
-      if (item && item !== "undefined") {
-        return JSON.parse(item);
-      }
-
-      localStorage.setItem(key, JSON.stringify(initialValue));
-      return initialValue;
-    } catch {
-      return initialValue;
-    }
-  };
-
   const [state, setState] = useState<T | null>(null);
 
   useEffect(() => {
+    const initialize = (key: string) => {
+      try {
+        const item = localStorage.getItem(key);
+        if (item && item !== "undefined") {
+          return JSON.parse(item);
+        }
+
+        localStorage.setItem(key, JSON.stringify(initialValue));
+        return initialValue;
+      } catch {
+        return initialValue;
+      }
+    };
     setState(initialize(key));
   }, [key]);
 
