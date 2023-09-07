@@ -67,7 +67,7 @@ const HomePage = () => {
   };
 
   return (
-    <section className="flex flex-col gap-y-10 items-center">
+    <section className="flex flex-col gap-y-10 items-center bg-zinc-700 rounded-sm border-2 border-gray-500 py-5" style={{width: "100%"}}>
       {loading ? (
         <div className="text-5xl font-bold">Loading...</div>
       ) : (
