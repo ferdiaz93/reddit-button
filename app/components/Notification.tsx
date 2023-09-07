@@ -8,6 +8,7 @@ const Notification: React.FC<NotificationProps> = ({ text }) => {
 	const [show, setShow] = React.useState(true);
 
 	useEffect(() => {
+		console.log('show', show)
 		const timeout = setTimeout(() => {
 			setShow(false);
 		}, 2000);
@@ -17,7 +18,7 @@ const Notification: React.FC<NotificationProps> = ({ text }) => {
 	}, [show]);
 
 	return (
-    <span className={`bg-white text-black  rounded-md text-center p-1 px-5 transition-opacity duration-300 ${show ? '' : 'opacity-0'}`}>
+    <span className={`bg-white text-black rounded-md text-center p-1 px-5 transition-opacity duration-300 ${show ? '' : 'opacity-0'}`}>
 			{text}
     </span>
   );
