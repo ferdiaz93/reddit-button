@@ -1,9 +1,10 @@
+import Image from "next/image";
 import React from "react";
 
 const Header = () => {
   const logo = (
-    <img
-      src="./images/reddit.png"
+    <Image
+      src="/images/reddit.png"
       alt="Reddit Logo"
       width="32"
       height="32"
@@ -11,18 +12,18 @@ const Header = () => {
   );
 
   const arrow = (
-    <img
-      src="./images/right-up.png"
+    <Image
+      src="/images/right-up.png"
       alt="Arrow"
       width="16"
       height="16"
       style={{filter: "brightness(0) invert(1)"}}
       />
       )
-      
+
   const search = (
-    <img
-      src="./images/search.png"
+    <Image
+      src="/images/search.png"
       alt="Search"
       width="16"
       height="16"
@@ -30,8 +31,8 @@ const Header = () => {
   );
 
   const message = (
-    <img
-      src="./images/messenger.png"
+    <Image
+      src="/images/messenger.png"
       alt="Message"
       width="20"
       height="20"
@@ -40,8 +41,8 @@ const Header = () => {
   );
 
   const bell = (
-    <img
-      src="./images/bell.png"
+    <Image
+      src="/images/bell.png"
       alt="Bell"
       width="20"
       height="20"
@@ -50,8 +51,8 @@ const Header = () => {
   );
 
   const plus = (
-    <img
-      src="./images/plus.png"
+    <Image
+      src="/images/plus.png"
       alt="Plus"
       width="20"
       height="20"
