@@ -81,9 +81,9 @@ const Header = () => {
         </div>
       </div>
       <div className="flex items-center gap-x-4 md:gap-x-10">
-        <div>{message}</div>
-        <div>{bell}</div>
-        <div>{plus}</div>
+        <div className="cursor-pointer p-2 rounded-full transition-all duration-200 hover:bg-gray-500">{message}</div>
+        <div className="cursor-pointer p-2 rounded-full transition-all duration-200 hover:bg-gray-500">{bell}</div>
+        <div className="cursor-pointer p-2 rounded-full transition-all duration-200 hover:bg-gray-500">{plus}</div>
       </div>
     </header>
   );
