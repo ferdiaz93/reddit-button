@@ -76,7 +76,7 @@ const Header = () => {
             </label>
             <input
               type="text"
-              className="bg-zinc-800 text-white placeholder-gray-400 focus:outline-none px-5"
+              className="bg-zinc-800 text-white placeholder-gray-400 focus:outline-none px-0 max-w-0 md:px-5 md:max-w-none"
             />
           </form>
         </div>

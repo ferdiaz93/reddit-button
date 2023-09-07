@@ -7,8 +7,8 @@ interface CounterProps {
 const Counter: React.FC<CounterProps> = ({ timeLeft }) => {
   return (
     <article className="text-center">
-      <h3 className="text-2xl">Time Left:</h3>
-      <span className="text-5xl">{timeLeft} seconds</span>
+      <h3 className="md:text-2xl">Tiempo restante:</h3>
+      <span className="md:text-5xl">{timeLeft} segundos</span>
     </article>
   );
 };

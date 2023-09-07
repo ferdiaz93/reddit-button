@@ -15,7 +15,7 @@ const UsersTable: React.FC<any> = () => {
 				<tr>
 					<th className="font-bold text-lg">Posición</th>
 					<th className="font-bold text-lg">Color</th>
-					<th className="font-bold text-lg">Cantidad</th>
+					<th className="font-bold text-lg">Cantidad de clicks</th>
 				</tr>
 			</thead>
 			<tbody>

@@ -71,7 +71,7 @@ const HomePage = () => {
   };
 
   return (
-    <section className="flex flex-col gap-y-10 items-center bg-zinc-700 rounded-sm border-2 border-gray-500 py-5" style={{width: "100%"}}>
+    <section className="flex flex-col gap-y-10 items-center bg-zinc-700 rounded-sm border-2 border-gray-500 py-5 px-5 " style={{width: "100%"}}>
       {loading ? (
         <div className="text-5xl font-bold">Loading...</div>
       ) : (
@@ -79,7 +79,7 @@ const HomePage = () => {
           <Counter timeLeft={timeLeft} />
           <Button onClick={handleClick} disabled={!!assignedColor}>
             <span className="absolute">
-              {!!assignedColor ? "Pressed" : "Press"}
+              {!!assignedColor ? "Presionado" : "Presionar"}
             </span>
           </Button>
           <article className={`h-24 ${!!delayedTime && !!assignedColor ? 'hidden' : ''}`}>
@@ -89,7 +89,7 @@ const HomePage = () => {
           </article>
           {!!assignedColor && (
             <article
-              className="text-5xl font-bold flex items-center justify-center"
+              className="md:text-5xl font-bold flex items-center justify-center"
               style={{ color: assignedColor, height: "100px" }}
             >Este es tu nuevo color de usuario</article>
             )}
