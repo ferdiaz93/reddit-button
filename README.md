@@ -1,34 +1,44 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Instalacion
 
-First, run the development server:
+Node: v18.17.0
+
+Ejecutar los comandos:
 
 ```bash
+npm i
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Situación
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+La fecha es 20 de marzo de 2015, trabajando en Reddit se le ocurre como
+broma de "April fools day" realizar una sección de la página que contenga un botón grande
+y un contador que indica una cantidad descendente de segundos.
+El contador desciende de 60 segundos a 0 y solo se resetea si alguien con la página abierta
+presiona el botón.
+Solo se puede presionar una vez por usuario y cuando un usuario lo presiona le queda
+asignado como recuerdo un color en función de esta tabla.
+## Se pide
+Que se realice una single page application que implemente la idea del botón
+considerando los siguientes aspectos:
+- El 'clickeo' del botón es una acción irreversible.
+- Se desea evitar presiones accidentales.
+- Al clickear se me asigna el color acorde a cuando clickie
+- Simular clicks de otra gente: al abrir la página, se debe ver como el contador
+desciende de 60 hasta algún número (aleatorio) y luego vuelve a 60.
+Para alguien que abre la página debe parecer como que hay gente con la página abierta
+clickeando el botón en momentos diversos.
+Una vez que el usuario clickeó: Mostrarle al menos una estadística o visualización
+relacionada a cuantos usuarios clickearon cada color
+Visual
+Una base de estilo y simetría. Fuentes, containers, colores, debe parecer una interfaz seria.
+## Comentarios
+Buscamos además código ordenado y legible. Levemente comentado mejor.
+Si cierro la página y la reabro que no se olvide si presioné el botón.
+Utilizar algún tipo de cookie o localStorage para guardar esa sesión. No es necesario
+Implementar networking / sockets
